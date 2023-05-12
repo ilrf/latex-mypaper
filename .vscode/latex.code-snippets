@@ -1,0 +1,102 @@
+{
+  "Displayed Formula": {
+    "scope": "latex",
+    "prefix": "displayed formula",
+    "body": [
+      "$$",
+      "$1",
+      "$$",
+      "$0",
+    ],
+    "description": "Insert displayed formula."
+  },
+  "Inline Math": {
+    "scope": "latex",
+    "prefix": "\\math",
+    "body": [
+      "$$1$",
+    ],
+    "description": "Insert inline math."
+  },
+  "Begin Paper": {
+    "scope": "latex",
+    "prefix": "paper",
+    "body": [
+      "\\documentclass{mypaper}",
+      "",
+      "\\title{${1:title}}",
+      "",
+      "\\begin{document}",
+      "\\maketitle",
+      "\\mainmatter",
+      "",
+      "$0",
+      "",
+      "\\end{document}"
+    ],
+    "description": "Begin paper."
+  },
+  "Math Table": {
+    "scope": "latex",
+    "prefix": "mathtable",
+    "body": [
+      "\\begin{table}[h]",
+      "    \\centering",
+      "    \\caption{$1}",
+      "    \\begin{tabularx}{0.9\\textwidth}{|*{${2:1}}{>{\\centering\\arraybackslash $}X<{$ }|}}",
+      "        $0",
+      "    \\end{tabularx}",
+      "    \\label{$3}",
+      "\\end{table}"
+    ],
+    "description": "math table"
+  },
+  "Begin Homework": {
+    "scope": "latex",
+    "prefix": "homework",
+    "body": [
+      "\\documentclass{homework}",
+      "",
+      "\\title{${1:title}}",
+      "\\date{${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}}",
+      "",
+      "\\begin{document}",
+      "\\maketitle",
+      "\\mainmatter",
+      "",
+      "$0",
+      "",
+      "\\end{document}"
+    ],
+    "description": "Begin homework."
+  },
+  "PhysicsExperiment Report": {
+    "scope": "latex",
+    "prefix": "pe",
+    "body": [
+      "\\documentclass{homework}",
+      "",
+      "\\title{${1:title}}",
+      "\\date{${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}}",
+      "",
+      "\\begin{document}",
+      "\\maketitle",
+      "\\mainmatter",
+      "",
+      "\\section*{实验目的}",
+      "$0",
+      "\\section*{实验原理}",
+      "",
+      "\\section*{实验仪器}",
+      "",
+      "\\section*{数据处理}",
+      "",
+      "\\section*{误差分析}",
+      "",
+      "\\section*{思考题}",
+      "",
+      "\\end{document}"
+    ],
+    "description": "Physics Experiment report."
+  },
+}

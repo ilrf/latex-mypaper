@@ -1,0 +1,89 @@
+{
+  "files.defaultLanguage": "latex",
+  "workbench.colorTheme": "Default Dark+",
+  // 活动窗口改变时自动保存
+  "files.autoSave": "onFocusChange",
+  // 保存时自动格式化
+  "editor.formatOnSave": true,
+  // 设置tab长度
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  /** 
+     * LaTex Workshop config
+     */
+  "latex-workshop.intellisense.unimathsymbols.enabled": true,
+  // 编译方案
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (xelatex)",
+      "tools": [
+        "xelatexmk"
+      ]
+    },
+    {
+      "name": "latexmk (lualatex)",
+      "tools": [
+        "lualatexmk"
+      ]
+    }
+  ],
+  // 编译工具
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "lualatexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+  ],
+  // 使用内置pdf浏览器预览pdf文件
+  "latex-workshop.view.pdf.viewer": "tab",
+  // 保存文件时不自动编译
+  "latex-workshop.latex.autoBuild.run": "never",
+  // 自动清理中间文件
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux", // latex 生成的主辅助文件，记录交叉引用、目录、参考文献的引用等
+    // "*.synctex.gz", //用于正反向搜索
+    // "*.out", // hyperref 宏包生成的 PDF 书签记录文件
+    // "*.bbl", // bibtex 生成的参考文献记录文件
+    "*.blg", // bibtex 生成的日志文件
+    "*.idx", // latex 生成的供 makeindex 处理的索引记录文件
+    "*.ind", // makeindex 处理 .idx 生成的用于排版的格式化索引文件
+    "*.lof", // latex 生成的图片目录记录文件
+    "*.lot", // latex 生成的表格目录记录文件
+    "*.toc", // latex 生成的目录记录文件
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log", // 排版引擎生成的日志文件，供排查错误使用
+    "*.fdb_latexmk",
+    "*.bcf",
+    "*.run.xml",
+  ],
+}
